@@ -1,9 +1,8 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { FaPen } from "react-icons/fa6";
 import { IoHomeOutline } from "react-icons/io5";
@@ -12,6 +11,7 @@ import { FaRegPlusSquare } from "react-icons/fa";
 import { RiAdminLine } from "react-icons/ri";
 import { RiLoginBoxLine } from "react-icons/ri";
 import { IoPersonAddOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -39,7 +39,6 @@ function Header() {
             className=" mx-lg-5"
             style={{ flex: "1", color: "#fff" }}
           >
-            {" "}
             BLOG{" "}
             <FaPen
               style={{
@@ -56,38 +55,43 @@ function Header() {
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{
-                maxHeight: "100px",
                 fontSize: "20px",
                 fontWeight: "500",
+                display: "flex",
+                alignItems: "center",
+                gap: "25px",
               }}
               navbarScroll
             >
-              <Nav.Link href="#action1" style={{ color: "#fff" }}>
+              <Link to="/" style={{ color: "#fff" }}>
                 <IoHomeOutline style={{ margin: "0 5px 3px 0 " }} />
                 Home
-              </Nav.Link>
-              <Nav.Link href="#action2" style={{ color: "#fff" }}>
+              </Link>
+              <Link to="/posts" style={{ color: "#fff" }}>
                 {" "}
                 <LuFileSignature style={{ margin: "0 5px 3px 0 " }} />
                 Posts
-              </Nav.Link>
-              <Nav.Link href="#action2" style={{ color: "#fff" }}>
+              </Link>
+              <Link to="/create" style={{ color: "#fff" }}>
                 <FaRegPlusSquare style={{ margin: "0 5px 3px 0 " }} />
                 Create
-              </Nav.Link>
-              <Nav.Link href="#action2" style={{ color: "#fff" }}>
+              </Link>
+              <Link to="/admin" style={{ color: "#fff" }}>
                 <RiAdminLine style={{ margin: "0 5px 3px 0 " }} />
                 Admin Dashboard
-              </Nav.Link>
+              </Link>
             </Nav>
             <div>
               <Button variant="light" style={{ margin: "5px" }}>
-                <RiLoginBoxLine style={{ margin: "0 5px 3px 0 " }} />
-                Login
+                <Link to="/login" style={{ color: "black" }}>
+                  <RiLoginBoxLine style={{ margin: "0 5px 3px 0 " }} /> Login
+                </Link>
               </Button>{" "}
               <Button variant="light" style={{ margin: "5px" }}>
-                <IoPersonAddOutline style={{ margin: "0 5px 3px 0 " }}/>
-                Register
+                <Link to="/register" style={{ color: "black" }}>
+                  <IoPersonAddOutline style={{ margin: "0 5px 3px 0 " }} />
+                  Register
+                </Link>
               </Button>{" "}
             </div>
           </Navbar.Collapse>

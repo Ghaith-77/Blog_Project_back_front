@@ -1,8 +1,7 @@
-
 :root {
   --main-color: #efefef;
   --primary-color: #1d2d3d;
-  --secondary-color:#495e74 ;
+  --secondary-color: #495e74;
   --gray-color: #778697;
   --dark-color: #292b2c;
   --blue-color: #0275d8;
@@ -12,15 +11,16 @@
   --red-color: #d9534f;
   --white-color: #fff;
 }
-.white{
-  color: #fff !important
+.white {
+  color: #fff !important;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none !important;
 }
 
 body {
