@@ -12,6 +12,9 @@
   --red-color: #d9534f;
   --white-color: #fff;
 }
+.white{
+  color: #fff !important
+}
 
 * {
   box-sizing: border-box;
