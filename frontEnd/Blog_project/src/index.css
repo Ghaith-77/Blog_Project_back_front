@@ -14,15 +14,26 @@
 .white {
   color: #fff !important;
 }
+.header {
+  background-image: url("./images/home-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none !important;
 }
-
+.cat {
+  border-top: 1px black solid !important;
+  border-bottom: 1px black solid !important;
+  padding: 10px;
+  text-align: center;
+}
 body {
   background-color: var(--main-color);
   overflow-x: hidden;
