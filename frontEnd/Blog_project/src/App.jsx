@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Posts from "./pages/Posts";
 import Register from "./pages/Register";
 import { Routes, Route } from "react-router-dom";
+import Footer from "./component/footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/posts" element={<Posts />} />
         <Route path="/register" element={<Register />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Post from "../component/post";
 import axios from "axios";
 import { Urlaxios } from "../constant";
+import Postslist from "../component/postslist";
 
 const homePage = () => {
   const [catigoryData, setCatigoryData] = useState();
-  const [postsData, setPostsData] = useState();
-
   useEffect(() => {
     axios(`${Urlaxios}/CatigoryRouts/getAllCatigory`)
       .then((res) => {
         setCatigoryData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    axios(`${Urlaxios}/postRouts/getAllPosts?pageNumber=1`)
-      .then((res) => {
-        setPostsData(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -53,11 +44,9 @@ const homePage = () => {
           Latest Posts
         </h3>
         <div className="row my-3">
-          <div className="posts col-md-8 col-sm-12 d-inline-block d-flex flex-column gap-4">
-            {postsData?.length > 0 ? postsData.map((e,index)=>{
-              return (<div key={index}><Post data={e}/></div>)
-            }) : "no posts found "}
-          </div>
+
+          <Postslist/>
+        
           <div className="catigry col-md-4 col-sm-12  ">
             <h3 className="cat">Categories</h3>
             <div className="catigorylist d-flex align-items-center justify-content-center flex-column gap-3 my-3">
